@@ -1,7 +1,7 @@
 import Button from 'components/UI/Button';
 
 import s from './Hero.module.css';
-export const Hero = () => {
+export const Hero = ({ toggleModal }) => {
   return (
     <div className={s.section}>
       <div className={s.wrap}>
@@ -14,7 +14,7 @@ export const Hero = () => {
           Development keeps evolving.
         </p>
         <div className={s.btn}>
-          <Button> Sign up</Button>
+          <Button onClick={toggleModal}> Sign up</Button>
         </div>
       </div>
     </div>
