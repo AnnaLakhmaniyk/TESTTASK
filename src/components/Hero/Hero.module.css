@@ -1,0 +1,40 @@
+.section{
+    background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/pexels-oleksandr-pidvalnyi-1227513.jpeg");
+    background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+ width: 1032px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+.wrap{
+padding: 164px 0 164px 0;
+max-width: 380px;
+margin: 0 auto;
+
+}
+.title{
+    font-size: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 21px;
+}
+
+.text{
+    font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 32px;
+}
+.btn{
+    text-align: center;
+
+}
+
+
