@@ -1,16 +1,15 @@
+import { HeaderNav } from './HeaderNav/HederNav';
+import { Hero } from './Hero/Hero';
+import { Users } from './Users/Users';
+import { SingUp } from './SingUp/SingUp';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <HeaderNav />
+      <Hero />
+      <Users />
+      <SingUp />
     </div>
   );
 };
