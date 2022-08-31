@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E5E5E5;
 }
 
 code {
@@ -18,7 +19,9 @@ ul {
   margin: 0;
   padding: 0;
 }
-
+a{
+  text-decoration: none;
+}
 p,
 h1,
 h2,
@@ -31,7 +34,6 @@ h6 {
 }
 img {
   display: block;
-  width: 100%;
   height: auto;
 }
 section{
@@ -44,6 +46,7 @@ section{
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
+
   /* outline: 1px solid red; */
 }
   @media screen and (min-width: 480px) {
