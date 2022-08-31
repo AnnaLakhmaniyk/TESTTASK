@@ -1,7 +1,8 @@
 import Button from 'components/UI/Button';
 import logo from '../../img/logo.svg';
+
 import s from './HeaderNav.module.css';
-export const HeaderNav = () => {
+export const HeaderNav = ({ toggleModal }) => {
   return (
     <header className={s.header}>
       <div className={s.wrap}>
@@ -14,7 +15,7 @@ export const HeaderNav = () => {
 
         <div>
           <Button style={{ marginRight: 10 }}>Users </Button>
-          <Button> SingUp</Button>
+          <Button onClick={toggleModal}> SingUp</Button>
         </div>
       </div>
     </header>
