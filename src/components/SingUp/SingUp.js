@@ -22,7 +22,9 @@ export const SingUp = ({ showModal }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [image, setImage] = useState('');
   const [user, setUser] = useState({});
+  const [disables, setDisablet] = useState(0);
 
   useEffect(() => {
     console.log(user);
@@ -43,6 +45,10 @@ export const SingUp = ({ showModal }) => {
       case 'priority':
         setPriority(value);
         break;
+      case 'file':
+        console.log(evt.target.files[0]);
+        setImage(evt.target.files[0].name);
+        break;
       default:
         break;
     }
@@ -55,7 +61,8 @@ export const SingUp = ({ showModal }) => {
   };
   const handleSubmit = evt => {
     evt.preventDefault();
-    setUser({ name, email, phone, priority });
+    setUser({ name, email, phone, priority, image });
+    setDisablet(1);
     reset();
   };
 
@@ -131,6 +138,15 @@ export const SingUp = ({ showModal }) => {
             ))}
           </RadioGroup>
         </FormControl>
+        <input
+          id="file-laader-button"
+          type="file"
+          name="file"
+          accept="image/jpg, image/jpeg"
+          size="5 Mb"
+          onChange={handleChange}
+        />
+
         <div className={s.btn}>
           <Button type="submit" onClick={showModal}>
             Sign up
