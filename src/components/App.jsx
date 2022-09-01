@@ -18,7 +18,7 @@ export const App = () => {
       <Users />
       {showModal && (
         <Modal onClose={toggleModal}>
-          <SingUp showModal={toggleModal} />
+          <SingUp showModal={() => toggleModal} />
         </Modal>
       )}
     </div>
