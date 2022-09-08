@@ -2,3 +2,43 @@
     text-align: center;
     margin-top: 50px;
 }
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+ margin-top: 15px;
+
+}
+.input{
+    position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px;
+}
+.label{
+    border-radius: 4px;
+border: 1px solid #D0CFCF;
+    color: #D0CFCF;
+    text-align: center;
+     width: 83px;
+    padding: 14px;
+font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-right: 18px;
+}
+.label:hover,
+.label:focus{
+    border: 1px solid #000000;
+       color: #000000;
+  
+}

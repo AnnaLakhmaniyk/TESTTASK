@@ -17,15 +17,18 @@ const priorityOptions = [
   'QA',
 ];
 
-export const SingUp = ({ showModal }) => {
+export const SingUp = ({ toggleModal }) => {
   const [priority, setPriority] = useState('Frontend developer');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [image, setImage] = useState('');
+  const [imajeUrl, setImageUrl] = useState('');
   const [user, setUser] = useState({});
-  const [disables, setDisablet] = useState(0);
-
+  const fileRider = new FileReader();
+  fileRider.onload = () => {
+    setImageUrl(fileRider.result);
+  };
   useEffect(() => {
     console.log(user);
   }, [user]);
@@ -46,8 +49,9 @@ export const SingUp = ({ showModal }) => {
         setPriority(value);
         break;
       case 'file':
-        console.log(evt.target.files[0]);
-        setImage(evt.target.files[0].name);
+        const file = evt.target.files[0];
+        setImage(file);
+        fileRider.readAsDataURL(evt.target.files[0]);
         break;
       default:
         break;
@@ -62,7 +66,6 @@ export const SingUp = ({ showModal }) => {
   const handleSubmit = evt => {
     evt.preventDefault();
     setUser({ name, email, phone, priority, image });
-    setDisablet(1);
     reset();
   };
 
@@ -138,19 +141,31 @@ export const SingUp = ({ showModal }) => {
             ))}
           </RadioGroup>
         </FormControl>
-        <input
-          id="file-laader-button"
-          type="file"
-          name="file"
-          accept="image/jpg, image/jpeg"
-          size="5 Mb"
-          onChange={handleChange}
-        />
-
+        <div className={s.wrap}>
+          <label htmlFor="file-button" className={s.label}>
+            Upload
+          </label>
+          <input
+            className={s.input}
+            id="file-button"
+            type="file"
+            name="file"
+            accept="image/jpg, image/jpeg"
+            size="5 Mb"
+            onChange={handleChange}
+          />
+          {imajeUrl && (
+            <img
+              className={s.img}
+              src={imajeUrl}
+              alt=""
+              width="60px"
+              height="60px"
+            />
+          )}
+        </div>
         <div className={s.btn}>
-          <Button type="submit" onClick={showModal}>
-            Sign up
-          </Button>
+          <Button type="submit">Sign up</Button>
         </div>
       </form>
     </div>
