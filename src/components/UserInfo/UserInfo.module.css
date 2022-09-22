@@ -1,0 +1,52 @@
+.wrap{
+    width: 320px;
+    padding: 40px 0 117px 20px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-image:  url("../../img/picmob.png");
+    background-repeat: no-repeat;
+    background-size:320px 100vh;
+}
+.literature {
+    margin-bottom: 32px;
+    width: 207px;
+}
+.resources{
+width: 207px;
+}
+.title{
+    font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        position: relative;
+        margin-bottom: 20px;
+}
+.title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #00122F;
+    bottom:-12px;
+}
+
+
+.linkLiteratur{
+    font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        color: #000000;
+        cursor: pointer;
+}
+.linkRsourse{
+    font-weight: 500;
+        font-size: 10px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        text-decoration:underline;
+        color: #000000;
+        cursor: pointer;
+}
